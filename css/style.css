@@ -1,0 +1,587 @@
+/*------------------------------------------------------
+RESETEO DE ESTILOS
+------------------------------------------------------*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+/*------------------------------------------------------
+ESTILOS GENERALES
+------------------------------------------------------*/
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+section, aside {
+    padding: 80px 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: "Dosis", sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+h1 {
+    color: white;
+    font-size: 1.1em;
+    margin-bottom: 80px;
+}
+
+h2 {
+    font-size: 1.5em;
+    letter-spacing: 7px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+h3 {
+    font-size: 1.2em;
+    letter-spacing: 7px;
+    text-align: center;
+}
+
+h4 {
+    color: black;
+    text-align: center;
+    letter-spacing: 4px;
+    margin: 10px auto;
+    font-size: 1.1em;
+}
+
+p { 
+    line-height: 1.5em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.grey-section {
+    background-color: rgb(240, 240, 240);
+}
+
+.padding-lateral {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+
+/*------------------------------------------------------
+ELEMENTOS CON ASPECTO DE BOTONES
+------------------------------------------------------*/
+
+.button {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 3px;    
+    padding: 8px 30px;
+    text-transform: uppercase;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0);
+    position: relative;
+    top: 0;
+    transition: all 0.5s ease/*-in o -out*/ 0.4s /*retardo*/;
+    /*transform: rotate(20deg);*/
+    transform-origin: right top;
+    
+}
+
+.button.negro {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+
+.button.blanco {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.button.blanco:hover,
+.button.negro:hover {
+    background-color: #6B9645;
+    color: white;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+    /*transform: rotate(0) scale(1.3);*/
+    /*transform: translate(-10px, -8px);*/
+    transform: rotate(25deg);
+    transform-origin: right top;
+
+}
+
+
+/*OTRAS ANIMACIONES*/
+section {
+  overflow: hidden;
+}
+
+.cajaValores > div img{
+  transition: all 0.5s;
+  /*transform: rotate(-45deg);*/
+  opacity: 0;
+  transform: translate(0, -200px);
+}
+
+.cajaValores > div:hover img{
+  /*transform: rotate(0);*/
+  opacity: 1;
+  transform: translate(0, 0px);
+}
+
+/*------------------------------------------------------
+BARRA DE NAVEGACIÓN
+------------------------------------------------------*/
+
+.menu nav {
+    width: auto;
+    min-height: 60px;  
+    background: black;
+}
+
+.menu nav > a {     /* alcanza sólo al descendiente directo (logotipo) */
+    float: left;
+}
+
+.menu .logo {
+    height: 30px;
+    margin: 15px 0 0 20px;
+}
+
+.menu ul {
+    float: right;
+    margin-right: 40px;
+}
+
+.menu li {
+    display: inline-block;  
+}
+
+.menu a {
+    display: block;    
+    letter-spacing: 2px;    
+    text-transform: uppercase;
+    color: white;
+    font-size: .9em;
+    padding: 0 10px;
+    line-height: 60px;
+}
+
+li.iconoMenu {
+    display: none; /*el icono del menú responsive se oculta de inicio*/
+}
+
+li.iconoMenu img {
+   cursor: pointer;
+}
+
+
+
+/*------------------------------------------------------
+HERO
+------------------------------------------------------*/
+
+.hero {
+    background: #000 url("../img/hero_background.jpg") no-repeat center / cover fixed;
+    text-align: center;
+    letter-spacing: 4px;
+    padding: 160px 0;
+}
+
+.hero img {
+    width: 900px;
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+/*------------------------------------------------------
+SERVICIOS
+------------------------------------------------------*/
+.iconosServicios{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.iconosServicios li { 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    
+    height: 105px; 
+     
+    margin: 0 2%;
+
+    color: rgb(190, 190, 190);    
+    letter-spacing: 3px;    
+    text-transform: uppercase;
+    
+    background: url('../img/icono1.jpg') no-repeat 50% top /  80px ;
+
+}
+
+
+
+.iconosServicios li:nth-child(2) {
+    background-image: url('../img/icono2.jpg');
+}
+
+.iconosServicios li:nth-child(3) {
+    background-image: url('../img/icono3.jpg');
+}
+
+.iconosServicios li:nth-child(4) {
+    background-image: url('../img/icono4.jpg');
+}
+  
+
+.iconosServicios li:nth-child(5) {
+    background-image: url('../img/icono5.jpg');
+}
+
+.iconosServicios p {
+    color: rgb(190, 190, 190);
+    letter-spacing: 4px;
+    font-size: 0.9em;
+}
+
+.columnasInfoServicios{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 4em;
+}
+ 
+
+.columnasInfoServicios p {
+    margin: 0 0.5%;
+    flex-basis: 30%;   
+    font-weight: 200;
+    color: rgba(0, 0, 0, 0.5);   
+}
+
+
+.columnasInfoServicios p:first-of-type {    
+    font-size: 1.5em;    
+}
+
+
+.columnasInfoServicios p.enlaceMasInfo{
+    flex-basis: 100%;
+    margin-top: 1em;
+    text-align: right;
+}
+
+ 
+
+
+.enlaceMasInfo a {
+   padding: 0.5em 1em; 
+   font-size: 0.9em;
+   transition: background-color 0.4s, color 0.4s;
+ 
+}
+
+.enlaceMasInfo a:hover {
+   background-color: #6B9645;
+   color: white;
+    
+}
+
+
+
+
+/*------------------------------------------------------
+NEWSLETTER
+------------------------------------------------------*/
+
+.newsletter {
+    text-align: center;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.newsletter small {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 0.8em;
+    display: block;
+}
+
+.newsletter .button {
+    margin: 30px auto;
+}
+
+
+
+/*------------------------------------------------------
+CLAIM CANCAN
+------------------------------------------------------*/
+
+.claim {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    background: #000 url("../img/cancan-background.jpg") no-repeat fixed center / cover;
+    color: white;
+}
+
+.claim > div {
+  flex-basis: 50%;
+}
+
+.claim h2 {
+    letter-spacing: 7px;
+    margin: 150px 0 40px 0;
+    text-align: left;
+}
+
+.claim p {
+    font-weight: 200;
+    line-height: 30px;
+}
+
+.claim .button{    
+    margin-top: 30px;
+}
+
+.claim img {
+    margin-left: 20%;
+    width: 80%;
+}
+
+
+/*------------------------------------------------------
+VALORES
+------------------------------------------------------*/
+
+.cajaValores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.cajaValores > div{
+    flex-basis: 33%;
+    margin-bottom: 4em;
+}
+
+section.valores{
+    padding-bottom: 20px;
+}
+
+.valores h3 {
+    margin-bottom: 80px;
+}
+
+
+
+.valores img {    
+    display: block;    
+    margin: 0 auto;
+    width: 80px;
+}
+
+.valores p {
+    color: rgb(90, 90, 90);
+    padding: 0 20px;
+}
+
+
+
+/*------------------------------------------------------
+FOOTER
+------------------------------------------------------*/
+
+footer {
+    padding: 150px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1.1em;
+}
+
+
+footer img {
+    margin-bottom: 50px;
+    width: 100px;
+}
+
+
+/*------------------------------------------------------
+MEDIA QUERIES
+------------------------------------------------------*/
+
+@media screen and (max-width: 850px){
+
+    /* general */
+
+    h1,h2,h3{
+        line-height: 1.5em;
+    }
+
+    h1{
+        margin-bottom: 1em;
+    }
+
+    /* navegacion */
+
+     .menu li{
+            display: none; /*ocultamos primero todos los li*/
+           
+      }
+      
+      .menu li.iconoMenu {
+           display: block; /*hacemos aparecer el li con el boton del menú */
+           position: absolute;
+           right: 30px;
+           top: 24px;
+      }
+
+
+      .menu.responsive li:not(:last-child) {
+             /* cuando el estilo .responsive se aplica por javascript hacemos que aparezcan todos los li.
+             pero el último, el last-child no quiero que obtenga estos estilos*/
+
+            display: block; 
+            padding: 0.5em 0 0.5em 24px;
+            border-bottom: 1px solid #DCDCDC;
+      } 
+
+ 
+      .menu nav  a{
+        line-height: 1.4em;
+      }
+
+      .menu nav > a,
+      .menu ul{
+        float: none;
+      }
+
+      /* hero */
+
+      .hero{
+        padding: 40px 0;
+      } 
+
+      .hero img{
+        width: 80%;
+      }
+
+
+      /* servicios */
+        
+
+       .iconosServicios li{
+        margin-bottom: 20px;
+       }
+
+       .columnasInfoServicios{
+           margin-top: 2em; 
+       }
+
+
+       .columnasInfoServicios p{
+            flex-basis: 49%;
+       }
+
+       .columnasInfoServicios p:first-child{
+            flex-basis: 100%;
+       }
+
+       .columnasInfoServicios p:not(:first-child){
+            margin-top: 1em;
+       }
+
+
+       /* claim */ 
+        
+
+       .claim div {
+           flex-basis: 100%;
+       }
+
+       .claim div:nth-child(2) {
+           display: none;
+       }
+
+       .padding-lateral{
+         padding-left: 40px;
+         padding-right: 40px;
+       }
+
+       .claim h2{
+         margin: 0;
+       }
+
+       /* nuestros valores */
+
+       .cajaValores > div {
+           flex-basis: 50%;
+        }
+
+        /* footer */
+
+        footer{
+            padding: 70px 0;
+        }
+ }
+
+@media screen and (max-width: 650px){
+    .padding-lateral{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    /* valores */
+    .valores img{
+        width: 50px;
+    }
+
+    /* servicios */
+
+    .columnasInfoServicios p{
+         flex-basis: 100%;
+    }
+
+    /* nuestros valores */
+
+    .cajaValores > div {
+        flex-basis: 100%;
+     }
+
+     .valores p{
+        padding: 0;
+     }
+
+}
+
+
+
+
+
+
+
+
+
+
+ 
+ 
+
+
+
